@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { ContentDataTitle, Project } from '../type/typdata';
-
+import Image from 'next/image';
 const WorkShowcase: React.FC<{ titlework: ContentDataTitle; projectlist: Project[] }> = ({ titlework, projectlist }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = projectlist.length;
@@ -76,12 +76,14 @@ const WorkShowcase: React.FC<{ titlework: ContentDataTitle; projectlist: Project
               {/* Right Image */}
               <div className="col-span-1 md:col-span-6 relative order-1 md:order-2 h-48 md:h-full">
                 <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full md:h-auto object-contain md:object-cover rounded-lg"
-                    loading="lazy"
-                  />
+                <Image
+  src={`/${project.image}`}  // Ensure this path starts with '/'
+  alt={project.title}
+  width={500} // Replace with the actual width of the image
+  height={300} // Replace with the actual height of the image
+  className="w-full h-full md:h-auto object-contain md:object-cover rounded-lg"
+  loading="lazy"
+/>
                 </div>
               </div>
             </div>

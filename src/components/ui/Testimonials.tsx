@@ -1,6 +1,6 @@
 import React from "react";
 import { Testimonial } from "../type/typdata";
-
+import Image from 'next/image';
 const Testimonialconferm: React.FC<{ testcontent: Testimonial }> = ({
   testcontent,
 }) => {
@@ -24,11 +24,14 @@ const Testimonialconferm: React.FC<{ testcontent: Testimonial }> = ({
         <div className="flex justify-center mb-4 sm:mb-0 sm:w-1/3">
           <div className="testimonial-fig">
             <span></span>
-            <img
-              className="w-32 h-32 rounded-full object-cover border-4 border-gray-300 shadow-lg"
-              src="ribal.png" // Ensure the image path is correct
-              alt={testcontent.title}
-            />
+            <Image
+  className="w-32 h-32 rounded-full object-cover border-4 border-gray-300 shadow-lg"
+  src="/ribal.png" // Ensure the image is located in the public folder
+  alt={testcontent.title}
+  width={128} // Set the width (in pixels)
+  height={128} // Set the height (in pixels)
+/>
+
           </div>
         </div>
       </div>

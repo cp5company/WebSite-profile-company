@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import React, { useState, useEffect } from "react";
 
 const LogoCarousel = () => {
@@ -93,9 +94,11 @@ const LogoCarousel = () => {
                     key={index}
                     className="flex items-center  justify-center"
                   >
-                    <img
+                    <Image
                       src={logo.src}
                       alt={logo.alt}
+                      width={128} // Set the width (in pixels)
+                      height={128} 
                       className={`${logo.className} object-contain filter brightness-100`}
                     />
                   </div>

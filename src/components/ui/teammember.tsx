@@ -24,9 +24,11 @@ const TeamMembers: React.FC<TeamMember> = ({
       }}>
         <div className="w-36 h-36 mb-4 rounded-full flex justify-center items-center border-2 border-red-500">
   <div className="w-32 h-32 rounded-full overflow-hidden flex justify-center items-center">
-    <img 
+  <Image
       src={image} 
       alt={name} 
+      width={128} // Set the width (in pixels)
+      height={128} 
       className="w-full h-full object-cover"
     />
   </div>
