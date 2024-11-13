@@ -1,3 +1,4 @@
+// src/components/Header.tsx
 "use client";
 import React from "react";
 import {
@@ -7,7 +8,6 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import ExploreButton from "@/components/ui/Animated Explore Button";
 import { ContentDataTitle } from "@/components/type/typdata";
 
 const Header: React.FC<{ headerdata: ContentDataTitle }> = ({ headerdata }) => {
