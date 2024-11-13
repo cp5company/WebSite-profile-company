@@ -1,0 +1,137 @@
+{
+  "Index": {
+    "title": "Welcome to our app"
+  },
+  "headers": {
+    "about": "About",
+    "connect":"connectus",
+    "Team":"ourTeam",
+    "Trust":"Trusted",
+     "Testimonials":"Testimonials",
+     "OurWork":"OurWork",
+     "Ourserver":"Ourserver"
+  },
+  "language": {
+    "ar": "Arabic",
+    "en": "English",
+    "change": "Change Language"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "header":{
+    "title":"YOUR DIGITAL SOLUTIONS PARTNER",
+    "body":"FROM ZERO TO HERO"
+  },
+   "itemsabout": {
+    "firstcontent":{
+      "title":"Welcome to CP: Who Are You",
+      "content":"At CP, we strive to be leaders in the software industry by providing innovative solutions that enhance business efficiency and contribute to the success of our clients. We believe that technology should be at the service of humanity, and that is why we work hard to develop easy-to-use and customized solutions that meet the requirements of each client."
+    },
+    "quality": {
+      "title": "QUALITY",
+      "content": "We believe that quality should never be sacrificed and that it’s better to leave the work untouched than to deliver it with less than expected quality."
+    },
+    "integrity": {
+      "title": "INTEGRITY",
+      "content": "Our commitment to integrity ensures we uphold the highest ethical standards in all we do."
+    },
+    "teamwork": {
+      "title": "TEAMWORK",
+      "content": "Collaboration and respect are at the core of our team’s success and performance."
+    },
+    "sustainability": {
+      "title": "SUSTAINABILITY",
+      "content": "We are committed to creating a sustainable future by minimizing our environmental footprint."
+    }
+  },
+  "ourserver":{
+    "firstcontent":{
+      "title":"What We Do",
+      "content":"Turn-Key Solutions & Apps"
+    },
+    "SystemsDevelopment": {
+      "title":"Systems Development",
+      "content":"Create complex enterprise softwares, ensure reliable software integration, modernise & automate your legacy system."
+      },
+    "WM": {
+      "title": "Websites & Mobile Applications",
+      "content": "We carry more than just good coding skills. Our experience makes us stand out to create effective apps that change the way people work and live"
+      },
+ 
+      "DataIntegration": {
+      "title": "Data Integration",
+      "content":"Seamlessly connect and synchronize your data across multiple platforms and systems for enhanced efficiency."
+      },
+      "smartapphome": {
+        "title":"Smart home application",
+        "content":"We focus on developing smart home applications that change the way you live. Thanks to our expertise in programming and technology, we provide innovative solutions that enable users to control their homes with ease, from lighting to smart appliances, enhancing comfort and security."
+        }
+  },
+  "ourwork":{
+    "firstcontent":{
+      "title":"Some of Our Work",
+      "content":"From Concept to Launch and Beyond"
+    },
+    "Zajil": {
+      "title":"Zajil Express",
+      "content":"Creating the main website for one of the largest logistics and shipping companies in KSA. Targeted to both businesses and personal shippers to provide easy shipping solutions, increase brand awareness, and improve online presence."
+      },
+    "Saudi": {
+      "title":"Saudi Banks",
+      "content":"Developing a comprehensive banking solution aimed at enhancing user experience and accessibility for clients."
+      },
+    "Meena": {
+      "title":"Meena Health",
+      "content":"Designing a health management platform to facilitate better patient-provider communication."
+      },
+    "Bunyan": {
+      "title":"Bunyan Project",
+      "content":"Building a project management tool tailored for construction firms."
+      },
+    "KAUST": {
+      "title":"KAUST Sustainability",
+      "content":"Creating a sustainability tracking platform for universities."
+      }
+
+  },
+  "Testimonial":{
+    "title":"Ribal Younes",
+    "subtitle":"Group Marketing Director at Technolight",
+    "body":"During my first meeting, I felt the passion, commitment, and knowledge. They challenged some of my ideas, and improved on others. I took a chance, and it paid off. I gained a team that works hand in hand with me to best illustrate my company, products, and services to my clients."
+  },
+  "ourteam":{
+    "conttitle":{
+      "title":"Our Team",
+      "body":"Over the years, our commitment to excellence and passion for our clients has been recognized."
+    },
+    "1": {
+      "name": "Abdulfattah Arashed",
+      "title": "Mobile Full Stack Developer",
+      "description": "He has more than 3 years of experience in application development"
+    },
+    "2": {
+      "name": "Abdullah Omar",
+      "title": "full stack developer",
+      "description": "He has more than 4 years of experience in full stack developer"
+    },
+    "3": {
+      "name": "Sakhr Wahib",
+      "title": "Back-End Developer",
+      "description": ""
+    },
+    "4": {
+      "name": "Fatima Al-Farsi",
+      "title": "UI/UX Designer",
+      "description": "Creative designer with a passion for creating user-friendly interfaces and experiences."
+    }
+  },
+  "connect":{
+    "title":"connect us",
+    "name":"enter your name",
+    "email":"enter your email",
+    "description":"enter the Message"
+  }
+}
