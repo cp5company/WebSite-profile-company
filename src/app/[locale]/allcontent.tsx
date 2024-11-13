@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Header from "./head/page";
+import HeadPage from "./head/page";
 import WhoAreWe from "@/components/ui/whoarewe";
 import ThreeContent from "@/components/ui/thecontent";
 import ServicesSection from "@/components/ui/ourserver";
@@ -38,10 +38,10 @@ const AllContent: React.FC<{ headerdata: AllBodyData }> = ({ headerdata }) => {
   return (
     <div className="flex flex-col justify-center items-center px-4 sm:px-8 lg:px-12 space-y-36">
       <section className="relative  w-screen scroll-left mt-48">
-        <Header headerdata={headerdata.header} />
+      <HeadPage  />
       </section>
       <section id="about" className="relative  w-screen scroll-left">
-        <WhoAreWe aboutfirst={headerdata.aboutfirst} />
+        <WhoAreWe  />
       </section>
       <section className="py-16 w-screen  scroll-bottom">
         <ThreeContent itemslist={headerdata.items} />
@@ -49,12 +49,12 @@ const AllContent: React.FC<{ headerdata: AllBodyData }> = ({ headerdata }) => {
       <section id="Ourserver" className="py-16  w-screen scroll-left">
         <ServicesSection
           ourserverlist={headerdata.ourserver}
-          obouttitle={headerdata.titleserver}
+          
         />
       </section>
       <section id="OurWork" className="py-16 w-screen  scroll-right">
         <OurWork
-          titlework={headerdata.titleourworks}
+          
           projectlist={headerdata.ourworklist}
         />
       </section>
@@ -63,8 +63,8 @@ const AllContent: React.FC<{ headerdata: AllBodyData }> = ({ headerdata }) => {
       </section>
       <section id="ourteam" className="py-16 w-screen scroll-left">
         <div className="p-2 space-y-2">
-          <h1 className="text-center font-bold text-5xl">{headerdata.ourteamcontent.title}</h1>
-          <p className="text-center">{headerdata.ourteamcontent.body}</p>
+          <h1 className="text-center font-bold text-5xl">ocjljldj</h1>
+          <p className="text-center">dldjldjdflk</p>
         </div>
         <TeamGrid teammember={headerdata.teammember} />
       </section>

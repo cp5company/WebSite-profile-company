@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from 'next/image';
 
 function Skeleton({
   className,
@@ -18,8 +19,10 @@ function Skeleton({
       {...props}
     >
       {imageSrc && (
-        <img
+        <Image
           src={imageSrc}
+          width={500} // Replace with the actual width of the image
+  height={300}
           alt="Skeleton image"
           className="w-full h-auto rounded-t-md mb-2"
         />

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 // Navigation Related
 interface NavData {
@@ -12,7 +12,7 @@ interface NavData {
   lang: string;
   ar: string;
   en: string;
-  changelag: string; // Fixed typo from String to string
+  changelag: string;
   light: string;
   dark: string;
   system: string;
@@ -37,17 +37,21 @@ interface FormValues {
 }
 
 // Content Related
-interface ContentDataTitle {
-  title: string;
-  body: string;
-}
+// interface ContentDataTitle {
+//   title: string;
+//   body: string;
+// }
+
 
 interface ItemAbout {
   src: string;
   title: string;
   content: string;
 }
-
+interface PageProps {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
 interface OurServerData {
   icon: ReactNode;
   title: string;
@@ -87,17 +91,17 @@ interface Connect {
 
 // Main Data Structure
 interface AllBodyData {
-  header: ContentDataTitle;
-  aboutfirst: ContentDataTitle;
+  // header: ContentDataTitle;
+  // aboutfirst: ContentDataTitle;
   items: ItemAbout[];
-  titleserver: ContentDataTitle;
+  // titleserver: ContentDataTitle;
   ourserver: OurServerData[];
-  titleourworks: ContentDataTitle;
+  // titleourworks: ContentDataTitle;
   ourworklist: Project[];
   testimonial: Testimonial;
   teammember: TeamMember[];
   connectus: Connect;
-  ourteamcontent:ContentDataTitle
+  // ourteamcontent: ContentDataTitle;
 }
 
 export type {
@@ -105,7 +109,7 @@ export type {
   Field,
   FormProps,
   FormValues,
-  ContentDataTitle,
+  // ContentDataTitle,
   ItemAbout,
   OurServerData,
   Project,

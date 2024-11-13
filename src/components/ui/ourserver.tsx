@@ -1,6 +1,6 @@
 "use client";
 
-import { ContentDataTitle, OurServerData } from "../type/typdata";
+import {  OurServerData } from "../type/typdata";
 
 // ServiceCard Component
 const ServiceCard: React.FC<OurServerData> = ({ icon, title, description }) => (
@@ -26,14 +26,14 @@ const ServiceCard: React.FC<OurServerData> = ({ icon, title, description }) => (
   </div>
 );
 // ServicesSection Component
-const ServicesSection: React.FC<{ ourserverlist: OurServerData[]; obouttitle: ContentDataTitle }> = ({ ourserverlist, obouttitle }) => (
+const ServicesSection: React.FC<{ ourserverlist: OurServerData[]}> = ({ ourserverlist }) => (
   <div className=" mx-auto p-5  sm:px-6 lg:px-8">
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-       {obouttitle.title}
+      djlkjlfjf
       </h2>
       <p className="text-xl text-muted-foreground">
-       {obouttitle.body}
+       dkdjkldjdljdfl
       </p>
     </div>
     

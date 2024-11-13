@@ -8,22 +8,22 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { ContentDataTitle } from "@/components/type/typdata";
+// import { ContentDataTitle } from "@/components/type/typdata";
 
-const Header: React.FC<{ headerdata: ContentDataTitle }> = ({ headerdata }) => {
+const hedpage: React.FC= () => {
   const handleClick = (): void => {
     alert("Let's Discuss Your Project");
   };
 
   return (
-    <header className="relative p-4 flex items-center justify-center overflow-hidden">
+    <div className="relative p-4 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 from-primary to-accent opacity-90" />
       <div className="relative z-10 text-center text-primary-foreground px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-6xl text-black dark:text-white font-bold tracking-tight mb-8 animate-fade-in">
-          {headerdata.title}
+          {"tid"}
         </h1>
         <h2 className="text-2xl md:text-4xl text-black dark:text-white font-semibold mb-12 animate-slide-up">
-          {headerdata.body}
+          {"body"}
         </h2>
         <a
           href="mailto:pdell9846@gmail.com"
@@ -38,7 +38,7 @@ const Header: React.FC<{ headerdata: ContentDataTitle }> = ({ headerdata }) => {
           <SocialIcon Icon={FaTimes} href="#" />
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
@@ -57,4 +57,4 @@ const SocialIcon: React.FC<SocialIconType> = ({ Icon, href }) => (
   </a>
 );
 
-export default Header;
+export default hedpage;
