@@ -1,7 +1,6 @@
 "use client";
-import Image from 'next/image';
 import React, { useState, useEffect } from "react";
-
+import Image from "next/image";
 const LogoCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -97,8 +96,8 @@ const LogoCarousel = () => {
                     <Image
                       src={logo.src}
                       alt={logo.alt}
-                      width={128} // Set the width (in pixels)
-                      height={128} 
+                      width={128}
+                      height={128}
                       className={`${logo.className} object-contain filter brightness-100`}
                     />
                   </div>

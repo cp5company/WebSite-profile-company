@@ -1,7 +1,10 @@
 "use client";
 
 import {  OurServerData } from "../type/typdata";
-
+interface data{
+  title: string;
+  body: string;
+};
 // ServiceCard Component
 const ServiceCard: React.FC<OurServerData> = ({ icon, title, description }) => (
   <div className="bg-card rounded-[var(--radius)] shadow-lg hover:shadow-xl p-8 transform hover:scale-105 transition-all duration-300 bg-transparent"
@@ -26,14 +29,14 @@ const ServiceCard: React.FC<OurServerData> = ({ icon, title, description }) => (
   </div>
 );
 // ServicesSection Component
-const ServicesSection: React.FC<{ ourserverlist: OurServerData[]}> = ({ ourserverlist }) => (
+const ServicesSection: React.FC<{ ourserverlist: OurServerData[]; obouttitle: data }> = ({ ourserverlist, obouttitle }) => (
   <div className=" mx-auto p-5  sm:px-6 lg:px-8">
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-      djlkjlfjf
+       {obouttitle.title}
       </h2>
       <p className="text-xl text-muted-foreground">
-       dkdjkldjdljdfl
+       {obouttitle.body}
       </p>
     </div>
     

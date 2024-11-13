@@ -1,5 +1,6 @@
-// src/components/Header.tsx
+// src/app/[locale]/head/page.tsx
 "use client";
+
 import React from "react";
 import {
   FaFacebookF,
@@ -8,28 +9,32 @@ import {
   FaTimes,
 } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-// import { ContentDataTitle } from "@/components/type/typdata";
+import ExploreButton from "@/components/ui/Animated Explore Button";
 
-const hedpage: React.FC= () => {
+
+const Header: React.FC = () => {
+  
+
   const handleClick = (): void => {
     alert("Let's Discuss Your Project");
   };
 
   return (
-    <div className="relative p-4 flex items-center justify-center overflow-hidden">
+    <header className="relative p-4 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 from-primary to-accent opacity-90" />
+
       <div className="relative z-10 text-center text-primary-foreground px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-6xl text-black dark:text-white font-bold tracking-tight mb-8 animate-fade-in">
-          {"tid"}
+        YOUR DIGITAL SOLUTIONS PARTNER
         </h1>
         <h2 className="text-2xl md:text-4xl text-black dark:text-white font-semibold mb-12 animate-slide-up">
-          {"body"}
+        FROM ZERO TO HERO
         </h2>
         <a
           href="mailto:pdell9846@gmail.com"
           className="bg-primary hover:bg-primary/90 border border-solid border-black text-primary-foreground px-8 py-4 rounded-[var(--radius)] text-lg font-semibold transition-all duration-300 transform hover:scale-105"
         >
-          Let&apos;s Discuss Your Project
+          Lets Discuss Your Project
         </a>
         <div className="flex justify-center space-x-6 mt-16">
           <SocialIcon Icon={FaFacebookF} href="#" />
@@ -38,7 +43,7 @@ const hedpage: React.FC= () => {
           <SocialIcon Icon={FaTimes} href="#" />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
@@ -52,9 +57,8 @@ const SocialIcon: React.FC<SocialIconType> = ({ Icon, href }) => (
     href={href}
     className="w-12 h-12 rounded-full m-3 dark:bg-primary/10 flex items-center justify-center hover:bg-black/20 dark:hover:bg-primary/20 transition-colors duration-300 transform hover:scale-105"
   >
-    <Icon className="w-5 h-5 text-primary " />{" "}
-    {/* Adjust icon color to match the theme */}
+    <Icon className="w-5 h-5 text-primary " />
   </a>
 );
 
-export default hedpage;
+export default Header;

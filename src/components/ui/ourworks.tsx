@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import {  Project } from '../type/typdata';
+import { Project } from '../type/typdata';
+ interface data{
+  title: string;
+  body: string;
+};
 import Image from 'next/image';
-const WorkShowcase: React.FC<{  projectlist: Project[] }> = ({ projectlist }) => {
+const WorkShowcase: React.FC<{ titlework: data; projectlist: Project[] }> = ({ titlework, projectlist }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = projectlist.length;
 
@@ -19,8 +23,8 @@ const WorkShowcase: React.FC<{  projectlist: Project[] }> = ({ projectlist }) =>
     <div className="relative h-[46rem] text-black dark:text-white overflow-hidden">
       {/* Header */}
       <div className="absolute left-1/2 -translate-x-1/2 z-10 text-center w-full px-4">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2">title work</h1>
-        <p className="text-gray-400 text-gray-900 dark:text-gray-200 text-sm md:text-base">title body</p>
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2">{titlework.title}</h1>
+        <p className="text-gray-400 text-gray-900 dark:text-gray-200 text-sm md:text-base">{titlework.body}</p>
       </div>
 
       {/* Navigation Counter */}
@@ -76,14 +80,14 @@ const WorkShowcase: React.FC<{  projectlist: Project[] }> = ({ projectlist }) =>
               {/* Right Image */}
               <div className="col-span-1 md:col-span-6 relative order-1 md:order-2 h-48 md:h-full">
                 <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
-                <Image
-  src={`/${project.image}`}  // Ensure this path starts with '/'
-  alt={project.title}
-  width={500} // Replace with the actual width of the image
-  height={300} // Replace with the actual height of the image
-  className="w-full h-full md:h-auto object-contain md:object-cover rounded-lg"
-  loading="lazy"
-/>
+                  <Image
+                 src={`/${project.image}`}  // Ensure this path starts with '/'
+                 alt={project.title}
+                 width={500} // Replace with the actual width of the image
+                 height={300} // Replace with the actual height of the image
+                 className="w-full h-full md:h-auto object-contain md:object-cover rounded-lg"
+                 loading="lazy"
+               />
                 </div>
               </div>
             </div>

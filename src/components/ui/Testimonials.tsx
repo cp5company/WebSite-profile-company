@@ -1,6 +1,6 @@
 import React from "react";
 import { Testimonial } from "../type/typdata";
-import Image from 'next/image';
+import Image from "next/image";
 const Testimonialconferm: React.FC<{ testcontent: Testimonial }> = ({
   testcontent,
 }) => {
@@ -29,9 +29,8 @@ const Testimonialconferm: React.FC<{ testcontent: Testimonial }> = ({
   src="/ribal.png" // Ensure the image is located in the public folder
   alt={testcontent.title}
   width={128} // Set the width (in pixels)
-  height={128} // Set the height (in pixels)
+  height={128} // Set the height (in pixels)
 />
-
           </div>
         </div>
       </div>

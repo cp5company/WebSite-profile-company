@@ -1,8 +1,7 @@
-import { AllBodyData, ItemAbout, OurServerData, Project, TeamMember } from "@/components/type/typdata";
+import { useTranslations } from "next-intl";
 import AllContent from "./allcontent";
 import { Code2, Database, Settings2, Smartphone } from "lucide-react";
-import { useTranslations } from "next-intl";
-
+import { AllBodyData, Connect, ItemAbout, OurServerData, Project, TeamMember, Testimonial } from "@/components/type/typdata";
 const Home: React.FC = () => {
   const t = useTranslations("Index");
   const head = useTranslations("header");
@@ -12,33 +11,33 @@ const Home: React.FC = () => {
   const Testimonialtranstion = useTranslations("Testimonial");
   const teamslisttransition = useTranslations("ourteam");
   const conncettranstion = useTranslations("connect");
-
   const itemsabout: ItemAbout[] = [
     {
       src: "/wtb-icon1.svg",
-      title: about("quality.title"),
+      title: about("quality.title"), // استخدم t بدلاً من useTranslations
       content: about("quality.content"),
     },
     {
       src: "/wtb-icon2.svg",
-      title: about("integrity.title"),
+      title: about("integrity.title"), // استخدم t بدلاً من useTranslations
       content: about("integrity.content"),
     },
-    {
-      src: "/wtb-icon4.svg",
-      title: about("teamwork.title"),
-      content: about("teamwork.content"),
-    },
-    {
-      src: "/wtb-icon4.svg",
-      title: about("teamwork.title"),
-      content: about("teamwork.content"),
-    },
-  ];
 
+    {
+      src: "/wtb-icon4.svg",
+      title: about("teamwork.title"), // استخدم t بدلاً من useTranslations
+      content: about("teamwork.content"),
+    },
+    {
+      src: "/wtb-icon4.svg",
+      title: about("teamwork.title"), // استخدم t بدلاً من useTranslations
+      content: about("teamwork.content"),
+    },
+    
+  ];
   const ourserverlist: OurServerData[] = [
     {
-      icon: <Settings2 className="w-full h-full" />,
+      icon: <Settings2 className="w-full h-full" />, // Use JSX here
       title: ourserver("SystemsDevelopment.title"),
       description: ourserver("SystemsDevelopment.content"),
     },
@@ -53,11 +52,13 @@ const Home: React.FC = () => {
       description: ourserver("DataIntegration.content"),
     },
     {
-      icon: <Smartphone className="w-full h-full" />,
+      icon: <Smartphone className="w-full h-full" />, // Use JSX here
       title: ourserver("smartapphome.title"),
       description: ourserver("smartapphome.content"),
     },
+    
   ];
+  //============================================ourworklist
 
   const ourworklist: Project[] = [
     {
@@ -105,8 +106,9 @@ const Home: React.FC = () => {
       image: "kaust_sust.jpg",
       tags: ["Web", "UI/UX", "SEO", "Testing", "Consultancy"],
     },
-  ];
 
+    // Add other projects as needed
+  ];
   const teamlist: TeamMember[] = [
     {
       image: "/abdulfattah.jpeg",
@@ -139,63 +141,65 @@ const Home: React.FC = () => {
       description: teamslisttransition("4.description"),
       linkend: "#",
     },
+    
   ];
 
-  const headerData = {
+  //===========================================endlist
+  // Create header data using the translations
+  const headerData= {
     title: head("title"),
     body: head("body"),
   };
-
   const aboutfirst = {
     title: about("firstcontent.title"),
     body: about("firstcontent.content"),
   };
-
   const titleserver = {
     title: ourserver("firstcontent.title"),
     body: ourserver("firstcontent.content"),
   };
-
   const ourteamcontern = {
     title: teamslisttransition("conttitle.title"),
     body: teamslisttransition("conttitle.body"),
   };
-
   const titleourwork = {
     title: ourworks("firstcontent.title"),
     body: ourworks("firstcontent.content"),
   };
-
-  const testimonial = {
+  const testimonial: Testimonial = {
     title: Testimonialtranstion("title"),
     subtitle: Testimonialtranstion("subtitle"),
     body: Testimonialtranstion("body"),
   };
-
-  const connectInfo= {
+  const connectInfo: Connect = {
     title: conncettranstion("title"),
     name: conncettranstion("name"),
     email: conncettranstion("email"),
     description: conncettranstion("description"),
   };
-
-  const bodyAllData:AllBodyData = {
-   items:itemsabout, // Include items in the body data
-   ourserver:ourserverlist,
-   ourworklist:ourworklist,
-    testimonial,
+  // Create body data using the header data and items
+  const bodyAllData: AllBodyData = {
+    aboutfirst: aboutfirst,
+    items: itemsabout, // Include items in the body data
+    titleserver: titleserver,
+    ourserver: ourserverlist,
+    titleourworks: titleourwork,
+    ourworklist: ourworklist,
+    testimonial: testimonial,
     teammember: teamlist,
     connectus: connectInfo,
+    ourteamcontent:ourteamcontern
   };
 
   return (
     <main className="min-h-screen w-screen bg-background flex justify-center text-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <div className="w-full">
-          <AllContent headerdata={bodyAllData} />
-        </div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+      <div className="w-full">
+        <AllContent headerdata={bodyAllData} />
       </div>
-    </main>
+    </div>
+  </main>
+  
   );
 };
 
